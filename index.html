@@ -17,7 +17,7 @@
 <div class="top_menu">
 <div class="container">
 <div class="float-left">
-<a href="#">Tuesday, June 14, 2022</a>
+<a id="mamdab" href="javascript:;"></a>
 </div>
 <div class="float-right">
 <ul class="list header_social">
@@ -83,19 +83,19 @@
 <div class="banner_content text-center">
 
 <h3>Welcome To Delta My Pride</h3>
-<p>We make sure your voice is heard and you are given the right platform to air your views about Delta State Political Structure.</p>
+<p>It is our belief that to entrench good governance we need to change our society, because every leader is a product of the society.</p>
 </div>
 </div>
 <div class="carousel-item">
 <div class="banner_content text-center">
-<h3>Welcome To Delta My Pride</h3>
-<p>We make sure your voice is heard and you are given the right platform to air your views about Delta State Political Structure.</p>
+<h3>The Nigerian Project</h3>
+<p>DMP is an initiative of like-minded individuals who believe in the Nigerian project and the need to encourage good governance..</p>
 </div>
 </div>
 <div class="carousel-item">
 <div class="banner_content text-center">
-<h3>Welcome To Delta My Pride</h3>
-<p>We make sure your voice is heard and you are given the right platform to air your views about Delta State Political Structure.</p>
+<h3>Youths in Politics</h3>
+<p>As the active population of the country, it is time for youths to begin to take positions in leadership.</p>
 </div>
 </div>
 </div>
@@ -108,7 +108,7 @@
 
 
 
-<section class="news_area" style="margin-top:40px; margin-bottom:40px;">
+<section class="news_area" style="margin-top:10px; margin-bottom:40px;">
 <div class="container">
 <div class="row">
 <div class="col-lg-8">
@@ -284,7 +284,8 @@
 <div class="col-lg-4 col-md-6 col-sm-6">
 <div class="single-footer-widget ab_widgets">
 <img src="img/flogo.png" alt="">
-<p>Delta State is a state in the South-South geopolitical zone of Nigeria. Named after the Niger Delta a large part of which is in the state the state was formed from the former Bendel State in August 27, 1991. </p>
+<p>DELTA MY PRIDE: PROJECT 2023<br>
+Delta My Pride (DMP) is an election support group. The objective of DMP is to amongst others: Support good governance Sensitize the electorate on choosing their leaders, Voters’ education. </p>
 </div>
 </div>
 <div class="col-lg-4 col-md-6 col-sm-6">
@@ -337,7 +338,22 @@
 <script src="js/jquery.ajaxchimp.min.js%20mail-script.js%20theme.js.pagespeed.jc.Mva0NZ9lbi.js"></script><script>eval(mod_pagespeed_nQC5Zq_H6A);</script>
 <script>eval(mod_pagespeed_yoH7Clv068);</script>
 <script>eval(mod_pagespeed_Plx4hWdcDf);</script>
+<script>
+/*
+const date = new Date();
+const n = date.toDateString();
+*/
+var d = new Date();
+var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
+var day = days[ d.getDay() ];
+var month = months[ d.getMonth() ];
+var year =  d.getFullYear();
+var noday = d.getDate();
+var n = day+", "+month+" "+noday+", "+year;
+document.getElementById("mamdab").innerHTML = n;
+</script>
 
 </body>
 </html>
