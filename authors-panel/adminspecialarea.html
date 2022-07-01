@@ -1,0 +1,310 @@
+
+    <header>
+        <!-- Mobile Menu Start -->
+        <div class="mobile-menu-area navbar-fixed-top hidden-sm hidden-md hidden-lg">
+            <nav class="mobile-menu" id="mobile-menu">
+                <div class="sidebar-nav">
+                    <ul class="nav side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                        <button class="btn mobile-menu-btn" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="javascript:;" onclick="apmenu()">All POST</a></li>
+						<li><a href="javascript:;" onclick="npmenu()">New POST</a></li>
+						<li><a href="javascript:;" onclick="crallmenu()">All Category</a></li>
+						<li><a href="javascript:;" onclick="crcrtmenu()">Add Category</a></li>
+						<!--<li><a href="javascript:;" onclick="cmmalmenu()">All Comment</a></li>
+						<li><a href="javascript:;" onclick="cmmctmenu()">Create Comments</a></li>-->
+						<li><a href="javascript:;" onclick="imrmenu()">All Media</a></li>
+                        <li><a href="javascript:;" onclick="logout()">Logout</a></li>
+                        
+                        <!-- social icon -->
+                        <li>
+                            <div class="social">
+                                Authors cPanel
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="top_header_icon">
+                    <span class="top_header_icon_wrap" style="padding: 0 6px 3px; color: #fff; font-weight:bold;">
+                            Authors cPanel
+                        </span>
+                    
+                </div>
+                <div id="showLeft" class="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu End -->
+        <!-- top header -->
+        <div class="top_header hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3">
+                        <div class="top_header_menu_wrap">
+                            <ul class="top-header-menu">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!--breaking news-->
+                    <div class="col-sm-8 col-md-7">
+                        <div class="newsticker-inner">
+                            <ul class="newsticker">
+                                
+                            </ul>
+                            <div class="next-prev-inner">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-2">
+                        <div class="top_header_icon">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top_banner_wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-sm-4">
+                        <div class="header-logo">
+                            <!-- logo -->
+                            <a href="./">
+                                <img class="td-retina-data img-responsive" src="../img/dmplogo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-md-8 col-sm-8 hidden-xs">
+                        <div class="header-banner">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navber -->
+        <div class="container hidden-xs">
+            <nav class="navbar">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li style="background-color: thistle;" class="active"><a href="./" >HOME</a></li>
+                        <li style="background-color: beige;"><a href="javascript:;" onclick="apmenu()" >All POST</a></li>
+						<li style="background-color: antiquewhite;"><a href="javascript:;" onclick="npmenu()">New POST</a></li>
+						<li style="background-color: beige;"><a href="javascript:;" onclick="crallmenu()">All Category</a></li>
+						<li style="background-color: antiquewhite;"><a href="javascript:;" onclick="crcrtmenu()">Add Category</a></li>
+						<!--<li><a href="javascript:;" onclick="cmmalmenu()">All Comment</a></li>
+						<li><a href="javascript:;" onclick="cmmctmenu()">Create Comments</a></li>-->
+						<li style="background-color: lavender;"><a href="javascript:;" onclick="imrmenu()">All Media</a></li>
+                        <li style="background-color: thistle;"><a href="javascript:;" onclick="logout()">Logout</a></li>
+                    </ul>
+                </div>
+                <!-- navbar-collapse -->
+            </nav>
+        </div>
+    </header>
+    <!-- header news Area
+        ============================================ -->
+   
+    <!-- Video News Area
+        ============================================ -->
+    <section class="admin-post-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 id="headlodge" class="category-headding ">All Post</h3>
+                    <div class="headding-border"></div>
+                </div>
+			</div>	
+			<!-- LIST CATEGORY -->
+			<div id="listpcategory" style="display:none;">
+			<div class="row" id="listcategoryrow" >
+			<div class="col-md-12" id="listcategorycol">
+			</div>
+			</div>
+			</div>
+			<!-- CREATE CATEGORY -->
+			<div id="pcategory" style="display:none;">
+			<div class="row" id="pcategoryrow" >
+			<center><button class="btn btn-info" id="setpcmsg" style="display:none;" onclick="crallmenu()">SUCCESSFUL</button></center>
+			<div class="col-md-12" id="pcategorycol">
+			 <div id="categorysDrl" class="help-block"></div>
+			 <div id="categorysdescrDrl" class="help-block"></div>
+			<form action="" name="categoryform" id="categoryform" onsubmit="return false;" method="post">
+			<button id="pcategoryptbt" class="btn btn-success" onclick="runPostCategory()">Create Post Category</button><br><br>
+			<div class="form-group">
+			<input type="hidden" name="crage" id="crage" value="create" />
+			<input type="hidden" name="cplace" id="cplace" />
+			<input type="text" name="categorys" id="categorys" autocomplete="off" class="form-control" placeholder="Post Category" /><br>
+			<label>Description</label><br>
+			<textarea data-autoresize name="categorysdescr" id="categorysdescr" class="form-control col-lg-12 harmtext"> </textarea>
+			</div>
+			</form>
+			</div>
+			</div>
+			</div>
+			
+			<!-- LIST IMAGES -->
+			<div id="listpimages" style="display:none;">
+			<div class="row" id="listimagerow" >
+			<div id="imagespin"></div>
+			<center><button class="btn btn-info" id="pcimgmsg" style="display:none;" onclick="">IMAGE DELETED</button></center>
+			<div class="col-md-12" id="listimagecol">
+			</div>
+			</div>
+			</div>
+			
+			<!-- LIST BLOG -->
+			<div id="listofposts" style="display:;">
+			<div class="row" id="listpostrow" >
+			<div class="col-md-12" id="listpostcol">
+			</div>
+			</div>
+			</div>
+			<!-- CREATE/EDIT BLOG -->
+			<div id="summerpost" style="display:none;">
+			<center><button class="btn btn-info" id="setpostmsg" style="display: none;" onclick="apmenu()">SUCCESSFUL</button></center>			
+			<div class="row" id="postformrow" >
+				<div class="col-md-12">
+				<div id="featureimageinputDrl" class="help-block"></div>
+				<div id="titleDrl" class="help-block"></div>
+				<div id="messgDrl" class="help-block" ></div>
+				</div>
+				<div class="col-md-12" style="display:flex; margin-bottom: 20px; height: 43px;">
+                <!--<button class="btn btn-warning" onClick="runPostOn('draft')">DRAFT</button>-->
+				<button class="btn btn-secondary show-modal" id="featuredFiles" data-toggle="modal" style="margin-right: 40%;"> Featured Image</button> 
+				<button class="btn btn-danger" onClick="runPostOn('publish')" >PUBLISH</button> 
+				</div>
+				<div id="featuredImage" style="padding-left: 20px; "></div>
+				<br><br>
+				<form action="" name="blogform" id="blogform" onsubmit="return false;" method="post">
+				<div class="col-sm-2" id=""><b>Select Category:</b></div>
+				<div class="col-sm-10" id="chpostcategrdiv"></div>
+				<br><br><br>
+				<input name="featureimageinput" id="featureimageinput" type="hidden">
+				<input name="pagestrip" id="pagestrip" type="hidden">
+				<input name="topwhat" id="topwhat" type="hidden" value="create">
+				<input name="pgdero" id="pgdero" type="hidden">
+				<div class="form-group" id="hdurl" style="display:none;"> <label>Url</label><br>
+				<input name="blgurl" id="blgurl" type="text" class="form-control" autocomplete="off" placeholder="url"  readonly="readonly" ondblclick="tendorl()" />
+				</div>
+				<div class="form-group">
+				<input name="title" id="title" type="text" class="form-control " autocomplete="off"  placeholder="Title" />
+				</div>
+				<div id="divmessg" class="form-group"><textarea id="messg" class=" summernote" name="messg"  ></textarea></div>
+				</form>
+            </div>
+            </div>
+			
+			<!-- LIST COMMENT -->
+			<div id="listpcomment" style="display:none;">
+			<div class="row" id="listcommentrow" >
+			<center><button class="btn btn-info" id="pcommentmsg" style="display:none;" onclick="">COMMENT DELETED</button></center>
+			<div class="col-md-12" id="listcommentcol">
+			
+			</div>
+			</div>
+			</div>
+			<!-- CREATE COMMENTS -->
+			<div id="pcomment" style="display:none;">
+			<div class="row" id="pcommentrow" >
+			<center><button class="btn btn-info" id="setcmmsg" style="display:none;" onclick="cmmctmenu()">COMMENT HAS BEEN POSTED</button></center>
+			<div class="col-md-12" id="pcommentcol">
+			<div id="commentonpostDrl" class="help-block"></div>
+			<div id="commenterDrl" class="help-block"></div>
+			<div id="commentryDrl" class="help-block"></div>
+			<form action="" name="commentform" id="commentform" onsubmit="return false;" method="post">
+			<button class="btn btn-success" onclick="runPostComment()">Comment</button><br><br>
+			<input type="hidden" name="commtp" id="commtp" value="create" />
+			<div class="form-group">
+			<div id="cmmsldiv"></div>
+			<select id="commentonpost" name="commentonpost" class="form-control">
+			<option value="">Select Post</option>
+			</select>
+			<input type="text" name="commenter" id="commenter" class="form-control" placeholder="Name" />
+			<input type="text" name="commenterdate" id="commenterdate" class="form-control"value="2022-03-31 03:37:30" />
+			<textarea data-autoresize name="commentry" id="commentry" class="form-control col-lg-12 harmtext"> </textarea>
+			</div>
+			</form>
+			</div>
+			</div>
+			</div>
+        </div>
+    </section>
+	
+	
+	<!-- Modal
+        ============================================ -->
+	<div id="modalIm" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="mefhhead">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <!--<h4 class="modal-title">Confirmation</h4>-->
+            </div>
+            <div class="modal-body" id="mefbody">
+
+            </div>
+            <div class="modal-footer" id="meffoot">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <!-- footer Area
+        ============================================ -->
+    <footer style="background: white;">
+        <div class="container">
+           
+        </div>
+    </footer>
+    <div class="sub-footer">
+        <!-- sub footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p><a href="" class="color-1">Authors cPanel 2.1</a> Open Source Credited to Princewill</p>
+                    <div class="social">
+                        <ul>
+                            <li><a href="javascript:;" class="facebook"><i class="fa  fa-facebook"></i> </a></li>
+                            <li><a href="javascript:;" class="twitter"><i class="fa  fa-twitter"></i></a></li>
+                            <li><a href="javascript:;" class="google"><i class="fa  fa-google-plus"></i></a></li>
+                            <li><a href="javascript:;" class="flickr"><i class="fa fa-flickr"></i></a></li>
+                            <li><a href="javascript:;" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="javascript:;" class="vimeo"><i class="fa fa-vimeo"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- custom js -->
+    <script type="text/javascript" src="js/custom.js"></script>
+	<script src="summernote/summernote.js"></script>
+	<script type="text/javascript" src="DataTables/DataTables-1.11.3/js/jquery.dataTables.min.js"></script> 
+	<script type="text/javascript" src="js/serall.js"></script>
+	<script type="text/javascript" src="js/serap.js"></script>
+	<script type="text/javascript" src="js/semenu.js"></script>
+	<script type="text/javascript" src="js/sercat.js"></script>
+	<script type="text/javascript" src="js/secmt.js"></script>
+
