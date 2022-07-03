@@ -51,7 +51,7 @@ function pushPCategory(){
 	var categoryrubies = "categoryrubies"
 	$.ajax({
 		type: "POST",
-		url: "./app/", 
+		url: "https://mytech.cu.ma/app/", 
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, categorys: categorys, categorysdescr:categorysdescr, categoryrubies:categoryrubies, crage:crage, cplace:cplace},
 		success: function(data){
@@ -78,7 +78,7 @@ function loadallCategory(){
 	 var brairgiugaq = "brairgiugaq";
     $.ajax({
 		type: "POST",
-		url: "./app/", 
+		url: "https://mytech.cu.ma/app/", 
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, brairgiugaq: brairgiugaq},
 		success: function(ListResponds){
@@ -170,7 +170,7 @@ function pushcatDelete(params) {
 	var catldel = params;
 		$.ajax({
 			type: "POST",
-			url: "./app/",
+			url: "https://mytech.cu.ma/app/",
 			dataType: 'json',
 			data: {olaprium: olaprium, auth_ola: auth_ola, catldel: catldel},
 			success: function(deleteData){
