@@ -18,7 +18,7 @@ function bowmaus(iviv, whos) {
     let cusonvrl = newURL;
     $.ajax({
         type: "POST",
-        url: "../vine/", 
+        url: "https://leaptvnews.com/nk/vine/", 
         dataType: "json",
         data: {cusonvrl: cusonvrl},
         success: function(responds){
