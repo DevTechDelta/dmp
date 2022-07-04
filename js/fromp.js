@@ -24,7 +24,7 @@ function bowmaus(iviv, whos) {
         success: function(responds){
             inkvrem = responds;
             var vralx = inkvrem.map(mzkp => mzkp.imbf); 
-            if(vralx.length > 5){
+            if(vralx.length < 5){
                 raleciu();
             }else{
                 furror();
