@@ -5,7 +5,7 @@ function emscitco() {
     let winsin = "viljkJlJSlweinvsNslei";
     $.ajax({
 		type: "POST",
-		url: "./vine/", 
+		url: "https://leaptvnews.com/nk/vine/", 
 		dataType: "json",
 		data: {winsin: winsin},
 		success: function(respond){
@@ -25,7 +25,7 @@ function emspstfo() {
     let vimpin = "sj493jbJHGY3jMNeow3";
     $.ajax({
 		type: "POST",
-		url: "./vine/", 
+		url: "https://leaptvnews.com/nk/vine/", 
 		dataType: "json",
 		data: {vimpin: vimpin},
 		success: function(respond){
