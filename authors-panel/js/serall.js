@@ -13,7 +13,7 @@ function loadallposts() { //load post from server
 	var pychhauemq = "pychhauemq";
     $.ajax({
 		type: "POST",
-		url: "https://mytech.cu.ma/app/", 
+		url: "https://leaptvnews.com/nk/app/", 
 		dataType: "json",
 		data: {olaprium: olaprium, auth_ola: auth_ola, pychhauemq: pychhauemq},
 		success: function(ListResponds){	
@@ -164,7 +164,7 @@ function pushpostDelete(params) {
 	var psttdel = params;
 		$.ajax({
 			type: "POST",
-			url: "https://mytech.cu.ma/app/",
+			url: "https://leaptvnews.com/nk/app/",
 			dataType: 'json',
 			data: {olaprium: olaprium, auth_ola: auth_ola, psttdel: psttdel},
 			success: function(deleteData){
