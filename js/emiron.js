@@ -42,15 +42,9 @@ function emspstfo() {
 	});
 }
 function wordpmaker() {
-    var pemLenght = pemcocom.length;
-    var pemLease = pemLenght - 2;
-    
-    var pemLeft = pemcocom.slice(0, pemLease);
-    var pemRight = pemcocom.slice(pemLease, pemLenght);
-    
     var TEXT = "";
     var ccinm = "";
-    pemLeft.forEach(function(item, index) {
+    pemcocom.forEach(function(item, index) {
         var cco = item.cci
 		cco = JSON.stringify(cco);
 		
@@ -66,38 +60,23 @@ function wordpmaker() {
                 }
             }
         })
-        TEXT += `<div class="media">
-        <div class="d-flex">
-        <img class="img-fluid" src="${item.imgf}" width="400px" alt="">
+        TEXT += `<div class="col-sm-6">
+        <div class="choice_item">
+        <div class="img-p-fluid">
+        <img class="img-fluid" src="${item.imgf}" alt="">
         </div>
-        <div class="media-body">
         <div class="choice_text">
         <div class="date">
         <a class="gad_btn" href="javascript:;">${ccinm}</a>
-        
         </div>
-        <a href="./post/#${item.blogul}"><h4>${item.blogsub} </h4></a>
-        <p>${item.blogmin}... </p>
+        <a href="./post/#${item.blogul}"><h4>${item.blogsub}</h4></a>
+        <p>${item.blogmin}...</p>
         <a href="./post/#${item.blogul}" class="btn btn-primary btn-sm rnm">Read More</a>
         </div>
         </div>
         </div>`;
     });
-    document.getElementById("inhole").innerHTML = TEXT;
-
-    var IMV = '';
-    pemRight.forEach(function(item, index) {
-        IMV += `<div class="item" style="margin-right:10px;">
-        <div class="choice_item">
-        <img src="${item.imgf}" width="150px" alt="">
-        <div class="choice_text">
-        <a href="./post/#${item.blogul}"><h4>${item.blogsub}</h4></a>
-        </div>
-        </div>
-        </div>`;
-    });
-    document.getElementById("budhole").innerHTML = IMV;
-    
+    document.getElementById("inhole").innerHTML = TEXT; 
 }
 function seeonline() {
 	if (navigator.onLine) {
